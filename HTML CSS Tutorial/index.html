@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML tutorial</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="charset: utf-8; type: text/html" /> 
+        <meta name="author" content="" />
+        <meta name="keyword" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="./external.css" />
+        <style>
+            body {
+                background-color: beige;
+            }
+        </style>
+        <script src="">
+
+        </script>
+    </head>
+    <body> 
+        <p>This is another paragraph tag</p>
+        <p id="para">This is a paragraph tag</p>
+        
+        <span>This is a span tag</span>
+        <span>This is another span tag</span>
+        <div style="height: 5000px;">This is a div tag</div>
+        <div>This is another div tag</div>
+        <div>rgdfgfd       fgfdg fdg         fgfgdf   
+            fgfdgdf    fgfdgdf
+             fdgfdg     fggdg
+        </div>
+        
+
+        <!-- basics tags -->
+            <p>HTML stands for <span style="color: red;">Hypertext markup language</span></p>
+            <div></div>
+            <span></span>
+            <a href="https://www.google.com">Google Search</a>
+            <a href="./index2.html">Index2</a>
+            <a href="./index.html#para">PARA</a>
+            <br> <br />
+            <hr> <hr />
+            <pre>This is pre tag rgdfgfd       fgfdg fdg         fgfgdf   
+                fgfdgdf    fgfdgdf
+                 fdgfdg     fggdg</pre>
+
+        <!-- multimedia tags -->
+            <img height="300px" src="https://4.bp.blogspot.com/-3jWZDg7hlWU/VKcPmkdP8yI/AAAAAAAAAIY/1E0IP9ZWuuc/s1600/Sample%2BXML.PNG" />
+            <img src="./1666192495660.png" height="300px" />
+
+            <audio controls>
+                <source src="./sample-3s.mp3" />
+            </audio>
+
+            <video height="300px" controls>
+                <source src="./SampleVideo_1280x720_1mb.mp4" />
+            </video>
+
+            <embed src="https://www.youtube.com/embed/Nebv9ZT2e74?si=h-i5HSY-NIQWgo5D" />
+            <iframe height="500px" width="300px" src="https://sample-videos.com/"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nebv9ZT2e74?si=h-i5HSY-NIQWgo5D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        <!-- semantic tags -->
+            <header></header>
+            <footer></footer>
+            <nav></nav>
+            <time></time>
+            <section></section>
+            <main></main>
+            <aside></aside>
+
+        <!-- formatting tags -->
+            <b>Bold</b><i>Italics</i><u>Underline</u>
+            <strong>Strong</strong><em>Emphasis</em><ins>Insert</ins>
+
+            2<sup>2</sup>
+            d<sub>x</sub>
+
+            <marquee direction="down"><center><p><mark>HTML</mark> stands for Hypertext <del>Marking</del><ins>MArkup</ins>language</p></center></marquee>
+            
+        <!-- list tags -->
+            <ol type="I">
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ol>
+            <ul type="square">
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ul>
+            <dl>
+                <dt>Title:</dt>
+                <dd>Some random text</dd>
+            </dl>
+
+        <!-- table tags -->
+            <table border="5px">
+                <caption>student database</caption>
+                <colgroup>
+                    <col span="2" style="background-color: blue;" />
+                    <col />
+                    <col style="background-color: red;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2">Student Name</th>
+                        <th rowspan="2">Address</th>
+                        <th rowspan="2">Mob No.</th>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>Bhubaneshwar</td>
+                        <td>3453454353</td>
+                    </tr>
+                    <tr>
+                        <td>Akash</td>
+                        <td>Soni</td>
+                        <td>Bengaluru</td>
+                        <td>6575465434</td>
+                    </tr>
+                    <tr>
+                        <td>Akash</td>
+                        <td>Soni</td>
+                        <td>Bengaluru</td>
+                        <td>6575465434</td>
+                    </tr>
+                    <tr>
+                        <td>Akash</td>
+                        <td>Soni</td>
+                        <td>Bengaluru</td>
+                        <td>6575465434</td>
+                    </tr>
+                    <tr>
+                        <td>Akash</td>
+                        <td>Soni</td>
+                        <td>Bengaluru</td>
+                        <td>6575465434</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+
+        <!-- heading tags -->
+            <h1>Heading Tag</h1>
+            <h2>Heading Tag</h2>
+            <h3>Heading Tag</h3>
+            <h4>Heading Tag</h4>
+            <h5>Heading Tag</h5>
+            <h6>Heading Tag</h6>
+
+        <!-- form tags -->
+            <form method="post" action="backend.php">
+                <label for="username">Enter username:</label>
+                <input type="text" name="uname" id="username" />
+                <br>
+                <label for="passwd">Enter password:</label>
+                <input type="password" name="pwd" id="passwd" />
+                <button type="submit">Submit</button>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>HTML forms:</legend>
+                    <formgroup>
+                        <label for="">Label</label>
+                        <input type="text" name="subject" placeholder="--No subject--" />
+                    </formgroup>
+                    <textarea rows="10" cols="50"></textarea>
+                    <button type="">Click</button>
+                </fieldset>            
+            </form>
+
+            <form method="get">
+                <input type="text" required />
+                <input type="email" />
+                <input type="number" />
+                <input type="tel" name="" id="">
+                <input type="password" name="" id="">
+                <input type="url" name="" id="">
+
+                <input type="date" name="date" />
+                <input type="datetime"/>
+                <input type="datetime-local" name="dtlocal" />
+                <input type="month" name="month" />
+                <input type="week" name="week" id="">
+                <input type="time" name="time" />
+
+                <input type="file" />
+                <input type="color" name="color" />
+                <input type="range" min="0" max="10" name="range" />
+
+                <input type="checkbox" name="chk1"><label>CHK1</label>
+                <input type="checkbox" name="chk2"><label>CHK1</label>
+                <input type="checkbox" name="chk3"><label>CHK1</label>
+                <input type="checkbox" name="chk4"><label>CHK1</label>
+
+                <input type="radio" name="gender" value="M"><label>Male</label>
+                <input type="radio" name="gender" value="F"><label>Female</label>
+                <input type="radio" name="gender" value="O"><label>Others</label>
+            
+                <input type="submit" value="Submit" />
+                <input type="button" value="click" />
+                <input type="reset" value="reset" />
+                <input type="image" src="./1666192495660.png"/>
+                <button type="submit">Submit</button>
+                <button type="menu">Menu button</button>
+                <button type="button">Button</button>
+                <button type="reset">Reset</button>
+            </form>
+    </body>
+</html>
