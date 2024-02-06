@@ -1,3 +1,113 @@
-body {
+/* CSS selectors */
+
+selector {
+property: value;
+}
+
+/* id selector (#) */
+#para {
+    font-weight: bold;
+}
+
+/* class based selector (.) */
+.textbox {
+    background-color: blue;
+}
+
+/* tag selector - tagname */
+input {
+    border: 5px solid red;
+}
+
+/* grouping selector (,) */
+table,th,td {
+    border: 2px solid black;
+}
+
+/* attribute selector */
+img[src="./1666192495660.png"] {
+    height: 200px;
+}
+
+*[type="button"] {
+
+}
+
+input[type="text"], input[type="password"]
+
+/* universal selector (*) */
+table * {
     font-size: 50px;
+}
+
+
+
+
+john div {
+    border: 4px solid red;
+    margin: 10px;
+    padding: 10px;
+    background-color: aqua;
+}
+/* descendent selector ( ) */
+#rohan * {
+    background-color: purple;
+}
+
+/* child selector (>) */
+#rohan>div {
+        background-color: brown;
+    }
+
+/* sibling selector (~) */
+#bob~div {
+    background-color: chartreuse;
+}
+/* adjacent elector (+) */
+#bob+div {
+    background-color: orange;
+}
+
+#sample2 {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+
+    position: sticky;
+    top: 50px;
+    right: 30px;
+}
+
+
+/* css properties */
+#position {
+    position: static;
+    position: relative;
+    position: absolute;
+    position: fixed;
+    position: sticky;
+}
+#box-properties {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+    height: 0;
+    width:0;
+
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+
+
+#sample {
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: red;
 }

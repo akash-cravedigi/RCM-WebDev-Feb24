@@ -3,25 +3,67 @@
     <head>
         <title>HTML tutorial</title>
         <meta charset="utf-8" />
-        <meta http-equiv="charset: utf-8; type: text/html" /> 
         <meta name="author" content="" />
         <meta name="keyword" content="" />
         <meta name="description" content="" />
-        <link rel="stylesheet" href="./external.css" />
+        <!--<link rel="stylesheet" href="./external.css" />-->
+        <meta charset="">
+        <meta http-equiv="content-security-policy" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8; "/>
+        <meta http-equiv="default-style" content="./external.css" />
+        <meta http-equiv="refresh" content="5"/>
+        <meta name="application-name" content="htmtutorialwebsite" />
+
         <style>
-            body {
-                background-color: beige;
+            #sample1 {
+                height: 500px;
+                border: 5px solid red;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+                align-items: stretch;
             }
+            #sample1>li {
+                border: 2px solid green;
+                align-self: flex-start;    
+            }
+            
         </style>
         <script src="">
 
         </script>
     </head>
-    <body> 
-        <p>This is another paragraph tag</p>
-        <p id="para">This is a paragraph tag</p>
+    <body style="background-color: aqua;"> 
+        
+        <div id="john">
+            <div id="steve">
+                <div id="lee"></div>
+                <div id="bob"></div>
+                <div id="ella"></div>
+                <div id="emma"></div>
+            </div>
+            <div id="rohan">
+                <div id="sam"></div>
+                <div id="tom">
+                    <div id="sal"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sample1">
+            <li style="align-self: flex-end;">List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </div>
+        <p dir="rtl" lang="">This is another paragraph tag</p>
+        <p id="para" title="this is a paragraph">This is a paragraph tag</p>
         
         <span>This is a span tag</span>
+        <p dir="ltr">This arabic word <bdi dir="rtl">ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
+        <bdi>This is a BDI tag</bdi>
         <span>This is another span tag</span>
         <div style="height: 5000px;">This is a div tag</div>
         <div>This is another div tag</div>
@@ -46,7 +88,7 @@
 
         <!-- multimedia tags -->
             <img height="300px" src="https://4.bp.blogspot.com/-3jWZDg7hlWU/VKcPmkdP8yI/AAAAAAAAAIY/1E0IP9ZWuuc/s1600/Sample%2BXML.PNG" />
-            <img src="./1666192495660.png" height="300px" />
+            <img src="./1666192495660.png" alt="Logo" height="300px" />
 
             <audio controls>
                 <source src="./sample-3s.mp3" />
@@ -104,7 +146,7 @@
             <table border="5px">
                 <caption>student database</caption>
                 <colgroup>
-                    <col span="2" style="background-color: blue;" />
+                    <col span="3" style="background-color: blue;" />
                     <col />
                     <col style="background-color: red;" />
                 </colgroup>
@@ -116,6 +158,8 @@
                     </tr>
                     <tr>
                         <th>First Name</th>
+                        
+                        <th>Middle name</th>
                         <th>Last Name</th>
                     </tr>
                 </thead>
@@ -187,12 +231,12 @@
             </form>
 
             <form method="get">
-                <input type="text" required />
-                <input type="email" />
-                <input type="number" />
-                <input type="tel" name="" id="">
-                <input type="password" name="" id="">
-                <input type="url" name="" id="">
+                <input class="textbox" type="text" required />
+                <input class="textbox" type="email" />
+                <input class="textbox" type="number" />
+                <input class="textbox" type="tel" name="" id="">
+                <input class="textbox" type="password" name="" id="">
+                <input class="textbox" type="url" name="" id="">
 
                 <input type="date" name="date" />
                 <input type="datetime"/>
