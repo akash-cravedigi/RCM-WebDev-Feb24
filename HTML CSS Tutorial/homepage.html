@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header { grid-area: header;}
+        #menu { grid-area: menu;}
+        #hero { grid-area: hero;}
+        #main { grid-area: main;}
+        #article { grid-area: article;}
+        #image { grid-area: image;}
+        #extra { grid-area: extra;}
+        #banner { grid-area: banner;}
+
+        #grid-container {
+            margin: 0;
+            display: grid;
+            grid-template-areas: 
+                'header menu menu menu'
+                'hero hero hero hero'
+                'main main article image'
+                'main main article extra'
+                'banner banner banner banner'
+                ;
+        }
+        #grid-container>section {
+            border: 2px solid red;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #hero {
+            height: 500px;
+        }
+    </style>
+</head>
+<body id="grid-container">
+    <section id="header">Header</section>
+    <section id="menu">Menu</section>
+    <section id="hero">Hero</section>
+    <section id="main">Main</section>
+    <section id="article">Article</section>
+    <section id="image">Image</section>
+    <section id="extra">Extra</section>
+    <section id="banner">Banner</section>
+</body>
+</html>

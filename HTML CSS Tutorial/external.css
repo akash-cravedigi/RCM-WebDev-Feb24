@@ -99,9 +99,29 @@ john div {
     padding: 0;
     border: 0;
     margin: 0;
+
+    margin: 10px 20px;
+
+    margin-inline: 20px;
+    margin-block: 10px;
+
+    margin: 10px 20px 30px 40px;
+    margin-top: ;
+    margin-bottom: ;
+
+    border: 2px solid red;
+    border-style: dashed;
+    border-color: ;
+    border: 2px;
+    border-radius: ;
 }
-
-
+#display {
+    display: block;
+    display: inline-block;
+    display: inline;
+    display: flex;
+    display: grid;
+}
 
 #sample {
     height: 300px;
@@ -110,4 +130,14 @@ john div {
     bottom: 0;
     right: 0;
     background-color: red;
+}
+
+#text-properties {
+    font-style: italic;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: underline;
+    color: red ;
+    background-color: aqua;
 }
