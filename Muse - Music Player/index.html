@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muse - Music Player</title>
+    <script src="https://kit.fontawesome.com/96374149a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <main></main>
+
+    <footer>
+        <div class="song-profile">
+            <img src="./assets/song-label.jpeg" id="song-profile-image" />
+            <div id="song-details">
+                <span>Song Name</span>
+                <span>Artist Name</span>
+            </div>
+            <div id="song-views">30% APR</div>
+        </div>
+        <div id="music-player">
+            <div id="music-controls">
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div id="song-status">
+                <input type="range" max="1000" min="0" value="70" />
+                <time>00:35</time>
+            </div>
+            <div id="wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+        <div id="volume-controls">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" max="100" min="0" value="70" />
+        </div>
+    </footer>
 </body>
 </html>
