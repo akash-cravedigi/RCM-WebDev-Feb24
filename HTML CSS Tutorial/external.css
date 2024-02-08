@@ -18,6 +18,9 @@ property: value;
 input {
     border: 5px solid red;
 }
+body {
+    background-color: aqua;
+}
 
 /* grouping selector (,) */
 table,th,td {
