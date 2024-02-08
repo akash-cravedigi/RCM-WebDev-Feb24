@@ -5,40 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muse - Music Player</title>
     <script src="https://kit.fontawesome.com/96374149a4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./external.css" />
     <style>
-        body>main {
-
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            background-color: aqua;
-            width: 100vw;
+        main {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
         }
-        .song-profile {
+       main>nav {
+        background-color: #2f2b45;
+        color: #7f79a1;
+        width: 20vw;
+       }
+       nav .menu-list {
+        margin-block: 20px;
+        margin-inline-start: 65px;
+       }
+       h5 {
+        font-size: 14px;
+        color:#7f79a1;
+        font-weight: normal;
+       }
+       .menu-list li {
+        list-style-type: none;
+        font-size: 18px;
+        padding-block: 5px;
+        margin-left: 50px;
+       }
+       .menu-list li>i {
+        position: absolute;
+        transform: translateX(-50%);
+        margin-inline-start: -35px;
+       }
+       nav img {
+        height: 40px;
+        margin: 10px 50px;
+       }
+       nav button {
+        margin-top: 10px;
+        background-color: transparent;
+        border: 2px dashed white;
+        border-radius: 40px;
+        color: white;
+        font-size: 15px;
+        padding: 10px 20px;
+       }
+       nav button i {
+        padding-right:5px;
+       }
+       .menu-list li.active {
+        background-image: linear-gradient(90deg,#ffffff4e ,#ffffff00);
+        color: white;
+        margin-left: -10px;
+        padding-left: 60px;
+        border-right: 5px solid white;
+       }
+       li.active i {
+       }
+       main>section#music-container {
+        background-color: #29263f;
+        width: 80vw;
+       }
+       #music-container header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       }
+       #music-container nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+       }
+       img[src="./assets/user-avatar.png"] {
+        height: 70px;
+       }
 
-        }
-        #music-player {
 
-        }
-        #volume-controls {
-            
-        }
-
+       
     </style>
 </head>
 <body>
     <main>
         <nav>
-            <img src="./assets/logo.png" alt="muse-logo" />
+            <img src="./assets/logo.png" alt="muse-logo"  />
             <div id="menu-categories-1" class="menu-list">
                 <h5>MENU</h5>
                 <li><i class="fa-solid fa-music"></i>Explore</li>
-                <li><i class="fa-brands fa-soundcloud"></i>Genres</li>
+                <li class="active"><i class="fa-brands fa-soundcloud"></i>Genres</li>
                 <li><i class="fa-solid fa-microphone"></i>Artists</li>
                 <li><i class="fa-solid fa-compact-disc"></i>Albums</li>
             </div>
@@ -319,6 +373,7 @@
                 <time>00:35</time>
             </div>
             <div id="wishlist">
+                <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-heart"></i>
             </div>
         </div>
