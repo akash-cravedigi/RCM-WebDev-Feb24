@@ -2,8 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #29263f;
 }
 footer {
+    padding-block: 10px;
     position: fixed;
     bottom: 0;
     background-color: #1B1D2B;
@@ -22,22 +24,23 @@ footer {
     color: white;
 }
 .song-profile img {
-    height: 70px;
+    height: 50px;
     margin: 15px 10px 15px 40px;
 }
 #song-details>span:nth-child(1) {
     display: block;
     color: #aba9b0;
-    font-size: 20px;
+    font-size: 15px;
 }
 #song-details>span:nth-child(2) {
     color: #7F79A1;
     display: block;
-    font-size: 20px;
+    font-size: 15px;
 }
 #song-views {
     margin-left: 50px;
     color: #7F79A1;
+    font-size: 10px;
 }
 #music-player {
     display: flex;
@@ -81,4 +84,178 @@ input[type=range]::-webkit-slider-thumb {
 #volume-controls i {
     color: #7F79A1;
     margin-right: 10px;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+main>nav {
+background-color: #2f2b45;
+color: #7f79a1;
+width: 20vw;
+}
+nav .menu-list {
+margin-block: 20px;
+margin-inline-start: 65px;
+}
+h5 {
+font-size: 14px;
+color:#7f79a1;
+font-weight: normal;
+}
+.menu-list li {
+list-style-type: none;
+font-size: 18px;
+padding-block: 5px;
+margin-left: 50px;
+}
+.menu-list li>i {
+position: absolute;
+transform: translateX(-50%);
+margin-inline-start: -35px;
+}
+nav img {
+height: 40px;
+margin: 10px 50px;
+}
+nav button {
+margin-top: 10px;
+background-color: transparent;
+border: 2px dashed white;
+border-radius: 40px;
+color: white;
+font-size: 15px;
+padding: 10px 20px;
+}
+nav button i {
+padding-right:5px;
+}
+.menu-list li.active {
+background-image: linear-gradient(90deg,#ffffff4e ,#ffffff00);
+color: white;
+margin-left: -10px;
+padding-left: 60px;
+border-right: 5px solid white;
+}
+
+main>section#music-container {
+    background-color: #29263f;
+    width: 80vw;
+}
+#music-container>header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #7F79A1;;
+}
+#music-container nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+#music-container nav li {
+    list-style-type: none;
+    display: block;
+    padding: 30px 20px;
+}
+#music-container nav li.active {
+    font-weight: bold;
+    color: white;
+    border-bottom: 4px solid white;
+}
+img[src="./assets/user-avatar.png"] {
+    height: 70px;
+}
+#music-container header>div#user-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#user-info {
+    text-align: right;
+    color: white;
+}
+#user-dropdown {
+    position: relative;
+}
+#user-dropdown button {
+    background-color: transparent;
+    color: #7f79a1;
+    border: none;
+}
+#user-dropdown i {
+    color: #7f79a1;
+}
+#user-dropdown #dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #7f79a1;
+    border-radius: 10px;
+    padding: 8px;
+    z-index: 1;
+}
+#user-dropdown #dropdown-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+#dropdown-content a:hover {
+    background-color: #635d86;
+    box-shadow: 0px 0px 4px 4px #433f5a;
+
+}
+#user-dropdown:hover #dropdown-content{
+    display: block;
+}
+body>main {
+    height: 88vh;
+}
+#music-container main aside {
+    position: absolute;
+    right: 0;
+    border-left: 1px solid #7f79a1;
+    overflow-y: scroll;
+    height: 75vh;
+}
+#music-container main aside::-webkit-scrollbar {
+    width: 10px;
+}
+#music-container main aside::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+#music-container main aside::-webkit-scrollbar-thumb {
+    background-color: #7873a7;
+    border-radius: 10px;
+}
+h4 {
+    margin-left: 30px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+.song-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+aside .song-item img {
+    margin: 10px 20px;
+}
+.song-item #play-underlay {
+    display:inline-block;
+    background-color: #7f79a1;
+    border-radius: 50%;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+.song-item #play-underlay i {
+    color: white;
+    padding: 13px 15px;
 }

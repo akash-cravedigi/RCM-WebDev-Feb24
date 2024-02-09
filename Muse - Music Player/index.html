@@ -7,82 +7,117 @@
     <script src="https://kit.fontawesome.com/96374149a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./external.css" />
     <style>
-        main {
+        #music-area {
+            width: 57vw;
+            overflow-y: scroll;
+            height: 76vh;
+        }
+        #music-area::-webkit-scrollbar {
+            width: 10px;
+        }
+        #music-area::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+        #music-area::-webkit-scrollbar-thumb {
+            background-color: #7873a7;
+            border-radius: 10px;
+        }
+        #music-area #hero {
+            margin: 20px;
+            background-color: #9a91e5;
+            background-image: linear-gradient(320deg, #9a91e5, #2f2b45);
             display: flex;
             flex-direction: row;
+            position: relative;
+            height: 50vh;
+            border-radius: 30px;
         }
-       main>nav {
-        background-color: #2f2b45;
-        color: #7f79a1;
-        width: 20vw;
-       }
-       nav .menu-list {
-        margin-block: 20px;
-        margin-inline-start: 65px;
-       }
-       h5 {
-        font-size: 14px;
-        color:#7f79a1;
-        font-weight: normal;
-       }
-       .menu-list li {
-        list-style-type: none;
-        font-size: 18px;
-        padding-block: 5px;
-        margin-left: 50px;
-       }
-       .menu-list li>i {
-        position: absolute;
-        transform: translateX(-50%);
-        margin-inline-start: -35px;
-       }
-       nav img {
-        height: 40px;
-        margin: 10px 50px;
-       }
-       nav button {
-        margin-top: 10px;
-        background-color: transparent;
-        border: 2px dashed white;
-        border-radius: 40px;
-        color: white;
-        font-size: 15px;
-        padding: 10px 20px;
-       }
-       nav button i {
-        padding-right:5px;
-       }
-       .menu-list li.active {
-        background-image: linear-gradient(90deg,#ffffff4e ,#ffffff00);
-        color: white;
-        margin-left: -10px;
-        padding-left: 60px;
-        border-right: 5px solid white;
-       }
-       li.active i {
-       }
-       main>section#music-container {
-        background-color: #29263f;
-        width: 80vw;
-       }
-       #music-container header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       }
-       #music-container nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-       }
-       img[src="./assets/user-avatar.png"] {
-        height: 70px;
-       }
+        #music-area #hero-image img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 55vh;
+        }
+        #hero-action {
+            color: white;
+            margin-left: 30px;
+        }
+        #hero-action h1 {
+            margin-block: 25px;
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        #hero-action h2 {
+            margin-block: 25px;
+            margin-top:60px ;
+            font-size: 30px;
+            font-weight: 200;
+        }
+        #hero-action h3 {
+            font-weight: normal;
+        }
+        #hero-action #cta {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #hero-action #cta-button {
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 25px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #hero-action #cta-icon-underlay {
+            border: 2px solid white;
+            margin-inline: 20px ;
+            border-radius: 50%;
+        }
+        #hero-action #cta-icon-underlay i {
+            padding: 20px;
+        }
+        #hero-action #cta-comment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #top-artists, #new-hits {
+            margin: 25px;
+        }
+        #top-artists header, #new-hits header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-block: 25px ;
+        }
+        #top-artists header h4,#new-hits header h4 {
+            margin: 0px;
+        }
+        #top-artists #song-list,#new-hits #song-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #top-artists .song-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #top-artists .song-item img {
+            height: 180px;
+        }
+        #new-hits .song-item img {
+            height: 120px;
+        }
+        #top-artists .song-item #song-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
-
-       
     </style>
 </head>
 <body>
@@ -113,7 +148,7 @@
         <section id="music-container">
             <header>
                 <nav>
-                    <li>Home</li>
+                    <li class="active">Home</li>
                     <li>Pools</li>
                     <li>NFTs</li>
                     <li>Launchpad</li>
@@ -132,7 +167,6 @@
                                 <a href="">Logout</a>
                             </div>
                         </div>
-
                     </div>
                     <img src="./assets/user-avatar.png" />
                 </div>
@@ -251,9 +285,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -264,9 +298,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -277,9 +311,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -290,9 +324,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -303,9 +337,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -316,9 +350,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -329,9 +363,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                         <div class="song-item">
                             <div class="song-profile">
@@ -342,9 +376,9 @@
                                 </div>
                                 <div id="song-views">30% APR</div>
                             </div>
-                            <div id="play-underlay">
+                            <span id="play-underlay">
                                 <i class="fa-solid fa-play"></i>
-                            </div>
+                            </span>
                         </div>
                     </div>
                 </aside>
