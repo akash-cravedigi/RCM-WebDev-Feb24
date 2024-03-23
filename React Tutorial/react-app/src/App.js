@@ -3,6 +3,8 @@ import ClassComponent from './components/ClassComponent';
 import FuncComponent from './components/FuncComponent';
 import States from './components/States';
 import Navigation from './components/Navigation';
+import Styling from './components/Styling';
+import Events from './components/Events';
 
 function Greeting() {
   return <h1>Hello World</h1>
@@ -20,8 +22,11 @@ function Application() {
 
   return (
     <div>
+      <Events />
       <Navigation />
+      <Styling />
       <States />
+
       {x}
       {Greeting()}
       {greeting}

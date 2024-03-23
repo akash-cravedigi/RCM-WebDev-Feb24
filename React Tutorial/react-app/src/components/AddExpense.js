@@ -5,9 +5,6 @@ import Form from 'react-bootstrap/Form';
 
 function AddExpense() {
     let [expenseName, setExpenseName] = useState("");
-    let [expenseAmount, setExpenseAmount] = useState("");
-    let [expenseDate, setExpenseDate] = useState("");
-    let [expenseCategory, setExpenseCategory] = useState("");
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -16,9 +13,6 @@ function AddExpense() {
   const handleFormSubmit = () => {
     console.log(document.getElementById("exp-name"));
     setExpenseName(document.getElementById("exp-name").value);
-    setExpenseAmount(document.getElementById("exp-amt").value);
-    setExpenseDate(document.getElementById("exp-date").value);
-    setExpenseCategory(document.getElementById("exp-cat").value);
     console.log(expenseName);
   }
 
